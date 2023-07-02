@@ -3,9 +3,10 @@ from django.contrib.auth.models import User
 from . import models
 
 class ContactusForm(forms.Form):
-    Name = forms.CharField(max_length=30)
-    Email = forms.EmailField()
-    Message = forms.CharField(max_length=500,widget=forms.Textarea(attrs={'rows': 3, 'cols': 30}))
+    Name = forms.CharField(max_length=30,label=('ชื่อ'))
+    Email = forms.EmailField(label=('อีเมล์'))
+    Message = forms.CharField(max_length=500,label=('ข้อความติดต่อ'),widget=forms.Textarea(attrs={'rows': 3, 'cols': 30}))
+    
 
 class TeacherSalaryForm(forms.Form):
     salary=forms.IntegerField()

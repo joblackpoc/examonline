@@ -19,29 +19,29 @@
 
 <br><br><br>
 <div class="container">
-  <h3 style="text-align: center;">Student Signup Form</h3>
+  <h3 style="text-align: center;">ฟอร์มลงทะเบียน</h3>
 <form method="POST" autocomplete="off" enctype="multipart/form-data">
     {% csrf_token %}
 
     <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="first_name">First Name</label>
-          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
+          <label for="first_name">ชื่อ</label>
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="ชื่อ" %}
         </div>
         <div class="form-group col-md-6">
-          <label for="last_name">Last Name</label>
-          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
+          <label for="last_name">นามสกุล</label>
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="นามสกุล" %}
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="mobile">Contact</label>
-          {% render_field studentForm.mobile|attr:'required:true'  class="form-control" placeholder="Contact Number" %}
+          <label for="mobile">เบอร์โทร.</label>
+          {% render_field studentForm.mobile|attr:'required:true'  class="form-control" placeholder="เบอร์โทร" %}
         </div>
         <div class="form-group col-md-6">
-          <label for="address">Address</label>
-          {% render_field studentForm.address|attr:'required:true'  class="form-control" placeholder="Address" %}
+          <label for="address">ที่อยู่</label>
+          {% render_field studentForm.address|attr:'required:true'  class="form-control" placeholder="ที่อยู่" %}
         </div>
       </div>
 
@@ -58,14 +58,14 @@
 
       <div class="form-row">
         <div class="form-group col-md-12">
-          <label for="profile_pic">Profile Picture</label>
+          <label for="profile_pic">รูปแทนตัวตนของท่าน</label>
           {% render_field studentForm.profile_pic|attr:'required:true' class="form-control" placeholder="" %}
         </div>
         
       </div>
 
 
-    <button type="submit" class="btn btn-success" style="border-radius: 0%;">Sign Up</button>
+    <button type="submit" class="btn btn-success" style="border-radius: 0%;">กดปุ่มลงทะเบียน</button>
   </form>
 </div>
 
